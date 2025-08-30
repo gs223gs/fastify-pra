@@ -1,4 +1,14 @@
 {
+  "name": "fastify-pra",
+  "version": "1.0.0",
+  "description": "Fastify TypeScript practice project",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "node --watch --experimental-strip-types fastifyTs.ts",
+    "start": "node dist/fastifyTs.js",
+    "start:prod": "npm run build && npm run start"
+  },
   "dependencies": {
     "fastify": "^5.5.0"
   },
