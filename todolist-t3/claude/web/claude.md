@@ -20,31 +20,9 @@ shadcn, tailwind
 
 ### 共通の型
 
-```ts
-type Todo = {
-  id: TodoId;
-  title: string;
-  description: string;
-  isDone: boolean;
-  createdAt: string;
-  updatedAt: string;
-};
+packages/types にまとめられています
+packages/schema にzodのスキーマがまとめられています
 
-type Todos = {
-  todos: todo[];
-};
-
-type TodoForm = {
-  id: TodoId;
-  title: string;
-  description: string;
-  isDone: boolean;
-};
-
-type TodoId = {
-  id: string;
-}
-```
 
 ## actons
 
@@ -53,24 +31,30 @@ GET: todo全て取得
 type Todos
 
 #### エラー時
+
 ### getTodo
 GET: 個別todoを取得
 type Todo
 
 #### エラー時
+
 ### createTodo
 POST: todoを作成
 type TodoForm
 #### エラー時
+
 ### updateTodo
 PUT: todoを更新
 #### エラー時
 ### deleteTodo
+
 DELETE: todoを削除
 #### エラー時
+
 ### doneTodo
 PUT: todoを完了
 #### エラー時
+
 ## ページ設計
 
 todos/ => todo全表示, SSR, todolist を全表示

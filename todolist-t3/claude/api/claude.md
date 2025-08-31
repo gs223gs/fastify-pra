@@ -4,12 +4,8 @@
 
 # アーキテクチャ関係
 
-T3-Turbo/web
-
-Next.js 15.4
-App Router
-shadcn, tailwind
-コンポーネントはpackages/uiにまとめられています．
+T3-Turbo/api
+fastify latest
 
 # 設計
 
@@ -20,31 +16,9 @@ shadcn, tailwind
 
 ### 共通の型
 
-```ts
-type Todo = {
-  id: TodoId;
-  title: string;
-  description: string;
-  isDone: boolean;
-  createdAt: string;
-  updatedAt: string;
-};
+packages/types にまとめられています
+packages/schema にzodのスキーマがまとめられています
 
-type Todos = {
-  todos: todo[];
-};
-
-type TodoForm = {
-  id: TodoId;
-  title: string;
-  description: string;
-  isDone: boolean;
-};
-
-type TodoId = {
-  id: string;
-}
-```
 ## API
 
 ### api/todos/new
